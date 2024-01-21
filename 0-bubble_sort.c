@@ -28,7 +28,8 @@ void bubble_sort(int *array, size_t size)
 	size_t i, j;
 	int swapped = 0;
 
-	/*Checks for the size of the array if its less than 2
+	/**
+	 *  Checks for the size of the array if its less than 2
 	 * then swap wouldn't occur at all
 	 */
 	if (size < 2)
