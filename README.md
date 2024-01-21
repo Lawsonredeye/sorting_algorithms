@@ -1,13 +1,9 @@
-Toggle navigation
-You have a captain's log due before 2024-01-21 (in about 15 hours)! Log it now!
-0x1B. C - Sorting algorithms & Big O
+# 0x1B. C - Sorting algorithms & Big O
 
-
-
-Background Context
+## Background Context
 This project is meant to be done by groups of two students. Each group of two should pair program for at least the mandatory part.
 
-Resources
+### Resources
 Read or watch:
 
 Sorting algorithm
@@ -19,7 +15,7 @@ All about sorting algorithms
 Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
 
-General
+##General
 At least four different sorting algorithms
 What is the Big O notation, and how to evaluate the time complexity of an algorithm
 How to select the best sorting algorithm for a given input
