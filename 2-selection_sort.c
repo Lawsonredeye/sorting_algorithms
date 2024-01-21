@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "sort.h"
 
 /**
@@ -28,7 +27,7 @@ void selection_sort(int *array, size_t size)
     size_t i, j, temp;
 
     if (size < 2)
-        exit(1);
+        return;
     /* Traverse the Loop*/
     for (i = 0; i < size; i++)
     {

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "sort.h"
 
 /**
@@ -33,7 +32,7 @@ void bubble_sort(int *array, size_t size)
 	 * then swap wouldn't occur at all
 	 */
 	if (size < 2)
-		exit(1);
+		return;
 	/* For Traversing across the array*/
 	for (i = 0; i < size - 1; i++)
 	{
