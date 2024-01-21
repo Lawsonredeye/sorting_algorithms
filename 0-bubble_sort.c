@@ -3,8 +3,25 @@
 #include "sort.h"
 
 /**
+ * swap - used for swapping two element values together
+ * @xp: pointer to an array
+ * @yp: pointer to an array
+ * Return: nothing as it just swaps elements from the memory address
+ */
+void swap(int *xp, int *yp)
+{
+	int temp;
+
+	temp = *xp;
+	*xp = *yp;
+	*yp = temp;
+}
+
+/**
  * bubble_sort - used for swap
- *
+ * @array: Array of unsorted values
+ * @size: size of unsorted array
+ * Return: Nothing
  */
 void bubble_sort(int *array, size_t size)
 {
@@ -33,10 +50,3 @@ void bubble_sort(int *array, size_t size)
 			break;
 	}
 }
-
-/**
- * if it gets to the end
- * check if the current element is greater than the last element
- * if it is, then swap size - 1 else break
- *
- */
