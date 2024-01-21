@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "sort.h"
 
 /**
@@ -9,7 +10,8 @@
  */
 void swap(int *xp, int *yp)
 {
-    int temp = *xp;
+    int temp;
+    temp = *xp;
     *xp = *yp;
     *yp = temp;
 }
@@ -26,12 +28,12 @@ void bubble_sort(int *array, size_t size)
      * then swap wouldn't occur at all
      */
     if (size < 2)
-        exit(1);
+        exit(0);
     /* For Traversing across the array*/
     for (i = 0; i < size; i++)
     {
         /* For comparing values at each elements*/
-        for (j = i; j < size; j++)
+        for (j = 0; j < size - i - 1; j++)
         {
             if (array[j] > array[j + 1])
                 swap(&array[j], &array[j + 1]);
