@@ -9,10 +9,11 @@
 listint_t *swapped(listint_t *node, listint_t **list)
 {
         listint_t *prev_node = node->prev, *current_node = node;
-        /*NULL, 19, 48, 9, 71, 13, NULL*/
+        /* first, the next of the prev_node points to the next of the current node  */
 
         prev_node->next = current_node->next;
-        if (current_node->next)
+        if (current_node->next != NULL) 
+		/* checks if it is not at the last node, if it is not, it keeps on traversing the list */
                 current_node->next->prev = prev_node;
         current_node->next = prev_node;
         current_node->prev = prev_node->prev;
