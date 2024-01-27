@@ -24,9 +24,8 @@ void quick_sort(int *array, size_t size);
 void swap(int *xp, int *yp);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
+void merge(int *array, size_t left_size, size_t right_size);
 void merge_sort(int *array, size_t size);
-void merge_sort_recursion(int *array, int l, int r);
-void merge_sorted_array(int *array, int l, int m, int r);
 
 listint_t *swapped(listint_t *node, listint_t **list);
 #endif
