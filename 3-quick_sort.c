@@ -41,7 +41,7 @@ int partition(int *array, size_t size)
 	 * and check if the jth element is <= the pivot
 	 */
 	if (low >= high || low < 0)
-		return (1);
+		return (-1);
 	for (j = low; j < high; j++)
 	{
 		if (array[j] <= pivot)
@@ -69,6 +69,6 @@ void quick_sort(int *array, size_t size)
 		return;
 	p = partition(array, size);
 	quick_sort(array, p);
-	quick_sort(array + p + 1, size - p - 1);
 	print_array(array, size);
+	quick_sort(array + p + 1, size - (p - 1));
 }
