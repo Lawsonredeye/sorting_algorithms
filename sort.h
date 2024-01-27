@@ -1,6 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
-
+#include <stddef.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -28,4 +28,5 @@ void merge_sort(int *array, size_t size);
 void merge_sort_recursion(int *array, int l, int r);
 void merge_sorted_array(int *array, int l, int m, int r);
 
+listint_t *swapped(listint_t *node, listint_t **list);
 #endif
