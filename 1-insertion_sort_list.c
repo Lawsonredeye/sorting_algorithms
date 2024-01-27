@@ -1,33 +1,49 @@
 #include "sort.h"
+#include <stddef.h>
 /**
-* insertion_sort_list - insertion sorting algorithm
-* @list: linked list to sort
-*/
+ *swap_node - swap a node for his previous one
+ *@node: node
+ *@list: node list
+ *Return: return a pointer to a node which was enter it
+ */
+listint_t *swapped(listint_t *node, listint_t **list)
+{
+        listint_t *prev_node = node->prev, *current_node = node;
+        /*NULL, 19, 48, 9, 71, 13, NULL*/
+
+        prev_node->next = current_node->next;
+        if (current_node->next)
+                current_node->next->prev = prev_node;
+        current_node->next = prev_node;
+        current_node->prev = prev_node->prev;
+        prev_node->prev = current_node;
+        if (current_node->prev)
+                current_node->prev->next = current_node;
+        else
+                *list = current_node;
+        return (current_node);
+}
+
+
+/**
+ * insertion_sort_list - function that sorts a doubly linked list
+ * of integers in ascending order using the Insertion sort algorithm
+ * @list: Dobule linked list to sort
+ */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *tmp;
-	int n;
+	listint_t *node;
 
-	if (!list)
+	if (list == NULL || (*list)->next == NULL)
 		return;
-	tmp = *list;
-	while (tmp)
+	node = (*list)->next;
+	while (node)
 	{
-		while (tmp)
+		while ((node->prev) && (node->prev->n > node->n))
 		{
-			if (tmp->next)
-			{
-				if (tmp->n > tmp->next->n)
-				{
-					n = tmp->n;
-					*(int *)&tmp->n = tmp->next->n;
-					*(int *)&tmp->next->n = n;
-					tmp = *list;
-					print_list(*list);
-					break;
-				}
-			}
-			tmp = tmp->next;
+			node = swapped(node, list);
+			print_list(*list);
 		}
+		node = node->next;
 	}
 }

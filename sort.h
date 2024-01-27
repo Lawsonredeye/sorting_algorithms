@@ -1,6 +1,6 @@
 #ifndef SORT_H
 #define SORT_H
-
+#include <stddef.h>
 /**
  * struct listint_s - Doubly linked list node
  *
@@ -24,5 +24,5 @@ void quick_sort(int *array, size_t size);
 void swap(int *xp, int *yp);
 void shell_sort(int *array, size_t size);
 void counting_sort(int *array, size_t size);
-
+listint_t *swapped(listint_t *node, listint_t **list);
 #endif
