@@ -2,7 +2,7 @@
 #include "sort.h"
 
 /**
- * swap - used for swapping two element value together
+ * swap - used for swapping two element values together
  * @xp: pointer to an array
  * @yp: pointer to an array
  *  Return: nothing as it just swaps elements from the memory address
